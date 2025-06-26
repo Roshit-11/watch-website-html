@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name"description" content="Website">
+    <meta name="keyword" content="html,web">
+    <meta name="author" content="Wristy">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wristy</title>
+
+    <!-- <link rel="stylesheet" href="path/to/font-awesome.css"> -->
+
+    <!-- Link to our custom CSS file to style the page -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Link to external JS file for added interactivity -->
+    <script src="../js/script.js"></script>
+</head>
+
+<body>
+
+    <!-- Header Section: Contains the logo and navigation menu -->
+    <section id="header">
+        <!-- Logo linking back to the home page -->
+        <a href="../index.html"><img src="../images/LOG.png" alt="Logo" class="nav-logo"></a>
+      
+        <!-- Navigation bar with links to different pages -->
+        <div>
+            <ul id="navbar">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../html/shop.html">Shop</a></li>
+                <li><a href="../html/blog.html">Blog</a></li>
+                <li><a href="../html/about.html">About</a></li>
+                <li><a href="../html/contact.html">Contact</a></li>
+                <li><a href="../html/research.html">Research</a></li>
+                <li><a href="../html/cart.html">Cart</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Page Header Section: Describes the cart page and offers a coupon -->
+    <section id="page-header" class="about-header">
+        <h2>#cart</h2>
+        <p>Add your coupon code & SAVE upto 70%!</p>
+    </section>
+
+    <!-- Cart Section: Displays the cart items and totals -->
+    <section id="cart" class="section-p1">
+        <!-- Table displaying the cart items -->
+        <table width="100%">
+            <thead>
+                <tr>
+                    <!-- Table headers for cart item attributes -->
+                    <td>SN</td>
+                    <td>Image</td>
+                    <td>Product</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>Subtotal</td>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Display individual cart items -->
+                <tr>
+                    <td>1</td>
+                    <td><img src="../images/rolex.jpg" alt=""></td>
+                    <td>Rolex Day Date</td>
+                    <td>RS 300000</td>
+                    <td>1</td>
+                    <td>RS 300000</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><img src="../images/iapplewatchse.jpg" alt=""></td>
+                    <td>Apple Watch SE</td>
+                    <td>RS 35000</td>
+                    <td>1</td>
+                    <td>RS 35000</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><img src="../images/casio-removebg-preview.png" alt=""></td>
+                    <td>Casio MWD-100H-1AV</td>
+                    <td>RS 100000</td>
+                    <td>1</td>
+                    <td>RS 100000</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Coupon Section: Users can apply a coupon for discounts -->
+    <section id="cart-add" class="section-p1">
+        <div class="coupon">
+            <h3>Apply Coupon</h3>
+            <div>
+                <!-- Input field for the coupon code -->
+                <input type="text" id="coupon-code" placeholder="Enter Your Coupon">
+                <!-- Button to apply the coupon code (will show a popup if invalid) -->
+                <button class="normal" onclick="document.getElementById('popup').style.display='block'">Apply</button>
+            </div>
+        </div>
+
+        <!-- Popup for invalid coupon -->
+        <div class="popup" id="popup" style="display:none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #fff; padding: 20px; border: 1px solid #ccc; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); z-index: 1000;">
+            <h4 style="color: red;">Invalid Coupon Code!</h4>
+            <button onclick="document.getElementById('popup').style.display='none'" style="padding: 10px; background-color: #ff4444; color: white; border: none; cursor: pointer;">Close</button>
+        </div>
+        
+        <!-- Subtotal Section: Displays the cart total and shipping info -->
+        <div class="subtotal">
+            <h3>Cart Totals</h3>
+            <table>
+                <tr>
+                    <!-- Cart Subtotal, left empty for now to be calculated later -->
+                    <td>Cart Subtotal</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <!-- Shipping information (set to free) -->
+                    <td>Shipping</td>
+                    <td>Free</td>
+                </tr>
+                <tr>
+                    <!-- Final total calculation -->
+                    <td><strong>Total</strong></td>
+                    <td><strong></strong></td>
+                </tr>
+            </table>
+            <!-- Button to proceed to checkout -->
+            <button><a class="cta-button" onclick="thankYouMessage()">Proceed to checkout</a></button>
+        </div>
+    </section>
+
+    <!-- Footer Section: Contains company info and links to various pages -->
+    <footer class="section-p1">
+        <div class="col">
+            <!-- Logo and contact details -->
+            <img src="../images/LOG.png" alt="Logo" class="nav-logo">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> Kathmandu, Nepal - 44600</p>
+            <p><strong>Phone:</strong> +977-9745401973</p>
+            <p><strong>Hours:</strong> 10:00 - 18:00, Mon - Sat</p>
+        </div>
+        <div class="col">
+            <!-- Links to About Us and Contact Us pages -->
+            <h4>About</h4>
+            <a href="../html/about.html">About us</a>
+            <a href="../html/contact.html">Contact Us</a>
+        </div>
+        <div class="col">
+            <!-- Links to user account and cart -->
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="../html/cart.html">View Cart</a>
+            <a href="../html/contact.html">Help</a>
+        </div>
+        
+        <!-- Copyright Notice -->
+        <div class="copyright">
+            <p>Created By Wristy | All Rights Reserved | &#169; 2025</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

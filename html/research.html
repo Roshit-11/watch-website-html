@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name"description" content="Website">
+    <meta name="keyword" content="html,web">
+    <meta name="author" content="Wristy">
+ 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research - Image Comparison</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* Body styling */
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(to right, #f7f7f7, #e0e0e0); /* Subtle gradient background */
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header (Navigation Bar) */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px 30px;
+            z-index: 100;
+            height: 60px;
+        }
+
+        /* Websitename styling inside header */
+        header .websitename {
+            font-size: 28px; /* Slightly bigger font */
+            font-weight: bold; /* Bold text for better emphasis */
+            color: #fafafa;
+        }
+
+        /* Navbar list styling */
+        header ul {
+            display: flex;
+            gap: 20px; /* Spacing between links */
+        }
+
+        /* Styling for navigation links */
+        header li {
+            list-style: none;
+        }
+
+        header a {
+            color: #fafafa;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        header a:hover {
+            color: #00bcd4; /* Highlight link on hover */
+        }
+
+        /* Main content section */
+        main {
+            margin-top: 80px; /* Offset for the fixed header */
+            padding: 20px;
+            text-align: center;
+            max-width: 1200px; /* Center and limit width for content */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #333;
+        }
+
+        /* Section margin styling */
+        section {
+            margin-bottom: 40px;
+        }
+
+        /* Table styling */
+        table {
+            width: 90%; /* Increased width */
+            margin: 0 auto;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        /* Styling for table headers and cells */
+        th, td {
+            padding: 15px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f4f4f4;
+            color: #555;
+        }
+
+        td {
+            background-color: #fafafa;
+        }
+
+        /* Styling for images inside table cells */
+        td img {
+            max-width: 100%;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.3s ease; /* Smooth zoom effect on hover */
+        }
+
+        td img:hover {
+            transform: scale(1.05); /* Slight zoom on hover */
+        }
+
+        /* Paragraph styling */
+        p {
+            font-size: 18px;
+            margin-top: 15px;
+            text-align: left;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8; /* Improved readability */
+            color: #555;
+        }
+
+        p em {
+            font-style: italic;
+        }
+
+        /* Subtle hover effect for table rows */
+        tr:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section: Contains website logo and navigation links -->
+    <section id="header">
+        <a href="../index.html"><img src="../images/LOG.png" alt="Logo" class="nav-logo"></a>
+   
+        <div>
+            <ul id="navbar">
+                <!-- Navigation Links -->
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../html/shop.html">Shop</a></li>
+                <li><a href="../html/blog.html">Blog</a></li>
+                <li><a href="../html/about.html">About</a></li>
+                <li><a href="../html/contact.html">Contact</a></li>
+                <li><a href="../html/research.html">Research</a></li>
+                <li><a href="../html/cart.html">Cart</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Main Content Section: Displays research results with images and descriptions -->
+    <main>
+        <h1>Research</h1>
+
+        <!-- First Research Section -->
+        <section>
+            <table>
+                <tr>
+                    <th>Reference</th>
+                    <th>Our Site</th>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- Reference Image with link -->
+                        <a href="https://www.titannepal.com/?srsltid=AfmBOopihEuyIeYHGcjQsLtvdn_WpUV-I3Rta6tP40X5lpiWik4wdWst" target="_blank">
+                            <img src="../images/home referenca.png" alt="Reference">
+                        </a>
+                    </td>
+                    <td>
+                        <!-- Our Site Image with link -->
+                        <a href="../index.html" target="_blank">
+                            <img src="../images/home.png" alt="Our Site">
+                        </a>
+                    </td>
+                </tr>
+            </table>
+            <!-- Description of research -->
+            <p>The reference we took here is a background video that plays on the website while it showcases a product or icons for promoting that particular 
+                product. In simple, neat, and sleek design aspects, we took things differently than those that would come in front of the video.</p>
+        </section>
+
+        <!-- Additional Research Sections (Similar to the first one) -->
+        <!-- Repeat similar structure for the other sections with references and their corresponding descriptions -->
+        <section>
+            <table>
+                <tr>
+                    <th>Reference</th>
+                    <th>Our Site</th>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="https://www.naviforce-watch.com/" target="_blank">
+                            <img src="../images/navref.png" alt="Image 3">
+                        </a>
+                    </td>
+                    <td>
+                        <a href="../index.html" target="_blank">
+                            <img src="../images/navmy.png" alt="Image 4">
+                        </a>
+                    </td>
+                </tr>
+            </table>
+            <p>The very fine navigation bar is of the brand Navi force. We tried to include it in our website just as it is, but the difference is that the navigation bar in our website have drop down menu in shop bar .</p>
+        </section>
+
+        <section>
+            <table>
+                <tr>
+                    <th>Reference</th>
+                    <th>Our Site</th>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="https://www.naviforce-watch.com/" target="_blank">
+                            <img src="../images/productref.png" alt="Image 5">
+                        </a>
+                    </td>
+                    <td>
+                        <a href="../html/shop.html" target="_blank">
+                            <img src="../images/myproduct.png" alt="Image 6">
+                        </a>
+                    </td>
+                </tr>
+            </table>
+            <p>The product page of Navi force  matched the ideal product page with no extra content. In addition to that, due to the absence of an  add to cart , we added it so that users could add itrms in their cart.</section>
+
+        <section>
+            <table>
+                <tr>
+                    <th>Reference</th>
+                    <th>Our Site</th>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="https://www.ablogtowatch.com/" target="_blank">
+                            <img src="../images/blogref.png" alt="Image 7">
+                        </a>
+                    </td>
+                    <td>
+                        <a href="blog.html" target="_blank">
+                            <img src="../images/myblog.png" alt="Image 8">
+                        </a>
+                    </td>
+                </tr>
+            </table>
+            <p>For our Blog reference we wanted multiple articles with different topics. So in search of that, we used the card-like system of this blog in our
+                 favor to make our website neat.</p>
+        </section>
+
+        <section>
+            <table>
+                <tr>
+                    <th>Reference</th>
+                    <th>Our Site</th>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="https://thewatchstore.ph/pages/about-us?srsltid=AfmBOorSaP4cS9SApFAjL5ldkz5XnRd8qNwQfhPgZ0iFohEPoyDxMS9S" target="_blank">
+                            <img src="../images/aboutusref.png" alt="Image 9">
+                        </a>
+                    </td>
+                    <td>
+                        <a href="../html/about.html" target="_blank">
+                            <img src="../images/myabout.png" alt="Reference0">
+                        </a>
+                    </td>
+                </tr>
+            </table>
+            <p>In this reference, the About Us section is quite good, but the overall site looks cluttered due to too many links being there at once, which
+                 can confuse the user. We reduced the number of links to align with our project’s motto of a cleaner and more user-friendly design.</p>
+        </section>
+
+
+    </main>
+
+    <!-- Footer Section: Contains company contact info, additional links, and copyright -->
+    <footer class="section-p1">
+        <div class="col">
+            <img src="../images/LOG.png" alt="Logo" class="nav-logo">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> Kathmandu, Nepal - 44600</p>
+            <p><strong>Phone:</strong> +977-9745401973</p>
+            <p><strong>Hours:</strong> 10:00 - 18:00, Mon - Sat</p>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="../html/about.html">About us</a>
+            <a href="../html/contact.html">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="../html/cart.html">View Cart</a>
+            <a href="../html/contact.html">Help</a>
+        </div>
+        <div class="copyright">
+            <p>Created By Wristy | All Rights Reserved | &#169; 2025</p>
+        </div>
+    </footer>
+</body>
+</html>

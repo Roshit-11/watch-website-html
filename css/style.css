@@ -1,0 +1,985 @@
+/* This is done to reset default browser styles and set a base for all elements */
+* {
+    margin: 0; /* Removes default margin from all elements */
+    padding: 0; /* Removes default padding from all elements */
+    box-sizing: border-box; /* Ensures padding and border are included in element dimensions */
+    font-family: 'Spartan', sans-serif; /* Sets the default font for the entire site */
+}
+
+/* This styles the main heading (h1) used for page titles */
+h1 {
+    font-size: 50px; /* Sets a large font size for main headings */
+    line-height: 64px; /* Adds space between lines for better readability */
+    color: #222; /* Sets the text color to dark gray */
+}
+
+/* This styles secondary headings (h2) used for section titles */
+h2 {
+    font-size: 46px; /* Slightly smaller than h1 for hierarchy */
+    line-height: 54px; /* Adjusts line spacing */
+    color: #222; /* Keeps the text color consistent */
+}
+
+/* This styles subheadings (h4) used for smaller titles */
+h4 {
+    font-size: 20px; /* Medium font size for subheadings */
+    color: #222; /* Dark gray text color */
+}
+
+/* This styles small headings (h6) used for captions or labels */
+h6 {
+    font-weight: 700; /* Makes the text bold */
+    font-size: 12px; /* Small font size for subtle text */
+}
+
+/* This styles paragraphs (p) used for body text */
+p {
+    font-size: 16px; /* Sets a readable font size */
+    color: #465b52; /* Uses a muted green color for text */
+    margin: 15px 0 20px 0; /* Adds spacing above and below paragraphs */
+}
+
+/* This is a utility class for adding consistent padding to sections */
+.section-p1 {
+    padding: 40px 80px; /* Adds 40px top/bottom and 80px left/right padding */
+}
+
+/* This is a utility class for adding consistent margin to sections */
+.section-m1 {
+    margin: 40px 0; /* Adds 40px margin to the top and bottom of sections */
+}
+
+/* This styles primary buttons used for calls-to-action (CTAs) */
+button.normal {
+    font-size: 14px; /* Sets a readable font size */
+    font-weight: 600; /* Makes the text semi-bold */
+    padding: 15px 30px; /* Adds comfortable padding for clickability */
+    color: #000; /* Sets the text color to black */
+    background-color: #fff; /* Sets the background to white */
+    border-radius: 4px; /* Adds slightly rounded corners */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    border: none; /* Removes the default border */
+    outline: none; /* Removes the outline on focus */
+    transition: 0.2s ease; /* Adds a smooth transition for hover effects */
+}
+
+/* This styles secondary buttons used on dark backgrounds */
+button.white {
+    font-size: 13px; /* Slightly smaller than primary buttons */
+    font-weight: 600; /* Keeps the text semi-bold */
+    padding: 11px 18px; /* Adds compact padding */
+    color: #fff; /* Sets the text color to white */
+    background-color: transparent; /* Makes the background transparent */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    border: 1px solid #fff; /* Adds a white border */
+    outline: none; /* Removes the outline on focus */
+    transition: 0.2s ease; /* Adds a smooth transition for hover effects */
+}
+
+/* This styles the body of the page, setting the base layout */
+body {
+    width: 100%; /* Makes the body take up the full width of the viewport */
+    background-color: #FAF6EF; /* Sets a light eggshell white background */
+}
+
+/* Header Section - Appears on All Pages */
+#header {
+    display: flex; /* Uses flexbox for layout */
+    align-items: center; /* Centers items vertically */
+    justify-content: space-between; /* Spaces items evenly */
+    padding: 20px 80px; /* Adds padding inside the header */
+    background: #D4D4D4; /* Sets a light gray background */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06); /* Adds a subtle shadow */
+    z-index: 999; /* Ensures the header stays on top of other elements */
+    position: sticky; /* Makes the header stick to the top of the page */
+    top: 0; /* Positions the header at the top of the viewport */
+}
+
+/* This styles the navigation bar inside the header */
+#navbar {
+    display: flex; /* Uses flexbox for layout */
+    align-items: center; /* Centers items vertically */
+    justify-content: center; /* Centers items horizontally */
+}
+
+/* This styles the list items inside the navbar */
+#navbar li {
+    list-style: none; /* Removes bullet points from the list */
+    padding: 0 20px; /* Adds 20px padding on the left and right of each item */
+    position: relative; /* Allows child elements to be positioned absolutely */
+}
+
+/* This styles the anchor (link) elements inside the navbar */
+#navbar li a {
+    text-decoration: none; /* Removes the underline from links */
+    font-size: 16px; /* Sets the font size to 16px */
+    font-weight: 600; /* Makes the text semi-bold */
+    color: #1a1a1a; /* Sets the text color to dark gray */
+    transition: 0.3s ease; /* Adds a smooth transition for hover effects */
+}
+
+/* This styles the links when hovered or active */
+#navbar li a:hover,
+#navbar li a.active {
+    color: #088178; /* Changes the text color to a shade of green */
+}
+
+/* This creates an underline effect for hovered or active links */
+#navbar li a:hover::after,
+#navbar li a.active::after {
+    content: ""; /* Adds an empty content block */
+    width: 30%; /* Sets the width of the underline to 30% */
+    height: 2px; /* Sets the height of the underline to 2px */
+    background: #088178; /* Makes the underline green */
+    position: absolute; /* Positions the underline absolutely within the list item */
+    bottom: -4px; /* Places the underline slightly below the text */
+    left: 20px; /* Aligns the underline with the text */
+}
+
+/* This styles the logo in the header */
+.nav-logo {
+    width: 200px; /* Sets the width of the logo */
+    height: 40px; /* Sets the height of the logo */
+}
+
+/* Hero Section - Home Page */
+#hero {
+    position: relative; /* Allows child elements to be positioned absolutely */
+    background-color: #114A3A; /* Sets a dark green fallback background */
+    width: 100%; /* Makes the hero section full width */
+    height: 750px; /* Sets a fixed height for the hero section */
+    overflow: hidden; /* Hides any content that overflows */
+    display: flex; /* Uses flexbox for layout */
+    align-items: center; /* Centers content vertically */
+    justify-content: flex-start; /* Aligns content to the left */
+    padding: 0 80px; /* Adds horizontal padding */
+}
+
+/* This styles the background video in the hero section */
+#background-video {
+    position: absolute; /* Positions the video absolutely within the hero section */
+    top: 0; /* Aligns the video to the top */
+    left: 30%; /* Starts the video at 30% from the left */
+    width: 70%; /* Makes the video cover 70% of the width */
+    height: 100%; /* Makes the video cover the full height */
+    object-fit: cover; /* Ensures the video covers the area without distortion */
+    z-index: 0; /* Places the video behind other content */
+}
+
+/* This styles the content inside the hero section */
+.hero-content {
+    position: relative; /* Ensures content stays above the video */
+    z-index: 1; /* Brings the content above the video */
+}
+
+/* This styles the h4 heading in the hero section */
+#hero h4 {
+    padding-bottom: 15px; /* Adds spacing below the heading */
+    color: rgb(157, 153, 153); /* Sets the text color to light gray */
+}
+
+/* This styles the h1 heading in the hero section */
+#hero h1 {
+    color: #ffffff; /* Sets the text color to white */
+}
+
+/* This styles the paragraph in the hero section */
+#hero p {
+    color: white; /* Sets the text color to white */
+}
+
+/* This styles the button in the hero section */
+#hero button {
+    background-image: url(../images/button.png); /* Adds a background image to the button */
+    background-color: transparent; /* Makes the background transparent */
+    color: rgb(157, 153, 153); /* Sets the text color to light gray */
+    border: 0; /* Removes the border */
+    padding: 14px 80px 14px 65px; /* Adds padding to the button */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    font-weight: 700; /* Makes the text bold */
+    font-size: 15px; /* Sets the font size to 15px */
+}
+
+/* Product Section - Shop Page */
+#product1 {
+    text-align: center; /* Centers the text inside the product section */
+}
+
+/* This styles the container for product cards */
+#product1 .pro-container {
+    display: flex; /* Uses flexbox for layout */
+    justify-content: space-between; /* Spaces product cards evenly */
+    padding-top: 20px; /* Adds padding at the top */
+    flex-wrap: wrap; /* Allows cards to wrap to the next line */
+}
+
+/* This styles individual product cards */
+#product1 .pro {
+    width: 23%; /* Sets the width of each product card */
+    min-width: 250px; /* Ensures cards don't get too small */
+    padding: 10px 12px; /* Adds internal padding */
+    border: 1px solid #cce7d0; /* Adds a light green border */
+    border-radius: 25px; /* Rounds the corners of the card */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02); /* Adds a subtle shadow */
+    margin: 15px 0; /* Adds spacing between cards */
+    transition: 0.2s ease; /* Adds a smooth hover effect */
+    position: relative; /* Allows child elements to be positioned absolutely */
+}
+
+/* This styles the hover effect for product cards */
+#product1 .pro:hover {
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06); /* Increases shadow on hover */
+}
+
+/* This styles the image inside product cards */
+#product1 .pro img {
+    width: 100%; /* Makes the image fill the card */
+    border-radius: 20px; /* Rounds the corners of the image */
+}
+
+/* This styles the description section inside product cards */
+#product1 .pro .des {
+    text-align: start; /* Aligns text to the left */
+    padding: 10px 0; /* Adds padding above and below the description */
+}
+
+/* This styles the span inside product descriptions */
+#product1 .pro .des span {
+    color: #606063; /* Sets the text color to gray */
+    font-size: 12px; /* Sets a small font size */
+}
+
+/* This styles the h5 heading inside product descriptions */
+#product1 .pro .des h5 {
+    padding-top: 7px; /* Adds spacing above the heading */
+    color: #1a1a1a; /* Sets the text color to dark gray */
+    font-size: 14px; /* Sets a medium font size */
+}
+
+/* This styles the icon inside product descriptions */
+#product1 .pro .des i {
+    font-size: 12px; /* Sets a small font size */
+    color: rgb(243, 181, 25); /* Sets the icon color to gold */
+}
+
+/* This styles the h4 heading inside product descriptions */
+#product1 .pro .des h4 {
+    padding-top: 7px; /* Adds spacing above the heading */
+    font-size: 15px; /* Sets a medium font size */
+    font-weight: 700; /* Makes the text bold */
+    color: #088178; /* Sets the text color to green */
+}
+
+/* This styles the cart icon inside product cards */
+#product1 .pro .cart {
+    width: 40px; /* Sets the width of the cart icon */
+    height: 40px; /* Sets the height of the cart icon */
+    line-height: 40px; /* Centers the icon vertically */
+    border-radius: 50px; /* Makes the icon circular */
+    background-color: #e8f6ea; /* Sets a light green background */
+    font-weight: 500; /* Makes the text medium-bold */
+    color: #088178; /* Sets the icon color to green */
+    border: 1px solid #cce7d0; /* Adds a light green border */
+    position: absolute; /* Positions the icon absolutely within the card */
+    bottom: 20px; /* Places the icon 20px from the bottom */
+    right: 10px; /* Places the icon 10px from the right */
+}
+
+/* Banner Section - Home Page */
+#banner {
+    display: flex; /* Uses flexbox for layout */
+    flex-direction: column; /* Stacks content vertically */
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+    text-align: center; /* Centers text */
+    background-color: #1D503A; /* Sets a dark green background */
+    width: 100%; /* Makes the banner full width */
+    height: 320px; /* Sets a fixed height */
+}
+
+/* This styles the h4 heading inside the banner */
+#banner h4 {
+    color: #fff; /* Sets the text color to white */
+    font-size: 16px; /* Sets a medium font size */
+}
+
+/* This styles the h2 heading inside the banner */
+#banner h2 {
+    color: #fff; /* Sets the text color to white */
+    font-size: 30px; /* Sets a large font size */
+    padding: 10px 0; /* Adds spacing above and below the heading */
+}
+
+/* This styles the span inside the h2 heading */
+#banner h2 span {
+    color: #ef3636; /* Sets the text color to red */
+}
+
+/* Small Banner Section - Home Page */
+#sm-banner {
+    display: flex; /* Uses flexbox for layout */
+    justify-content: space-between; /* Spaces banner boxes evenly */
+    flex-wrap: wrap; /* Allows boxes to wrap to the next line */
+}
+
+/* This styles the first small banner box */
+#sm-banner .banner-box1 {
+    display: flex; /* Uses flexbox for layout */
+    flex-direction: column; /* Stacks content vertically */
+    justify-content: center; /* Centers content vertically */
+    align-items: flex-start; /* Aligns content to the left */
+    text-align: center; /* Centers text */
+    background-image: url(../images/blog2.jpg); /* Adds a background image */
+    background-size: cover; /* Ensures the image covers the box */
+    background-position: center; /* Centers the background image */
+    min-width: 850px; /* Sets a minimum width */
+    height: 400px; /* Sets a fixed height */
+    padding: 30px; /* Adds internal padding */
+}
+
+/* This styles the h4 heading inside small banner boxes */
+#sm-banner h4 {
+    color: #fff; /* Sets the text color to white */
+    font-size: 20px; /* Sets a medium font size */
+    font-weight: 300; /* Makes the text light */
+}
+
+/* This styles the h2 heading inside small banner boxes */
+#sm-banner h2 {
+    color: #fff; /* Sets the text color to white */
+    font-size: 28px; /* Sets a large font size */
+    font-weight: 800; /* Makes the text bold */
+}
+
+/* This styles the span inside small banner boxes */
+#sm-banner span {
+    color: #fff; /* Sets the text color to white */
+    font-size: 14px; /* Sets a small font size */
+    font-weight: 500; /* Makes the text medium-bold */
+    padding-bottom: 15px; /* Adds spacing below the text */
+}
+
+/* This styles the hover effect for buttons inside small banner boxes */
+#sm-banner .banner-box:hover button {
+    background-color: #088178; /* Changes the button background to green */
+    border: 1px solid #088178; /* Changes the button border to green */
+}
+
+/* This styles the second small banner box */
+#sm-banner .banner-box2 {
+    display: flex; /* Uses flexbox for layout */
+    flex-direction: column; /* Stacks content vertically */
+    justify-content: center; /* Centers content vertically */
+    align-items: flex-start; /* Aligns content to the left */
+    text-align: center; /* Centers text */
+    background-image: url(../images/blog3.jpg); /* Adds a background image */
+    background-size: cover; /* Ensures the image covers the box */
+    background-position: center; /* Centers the background image */
+    min-width: 850px; /* Sets a minimum width */
+    height: 400px; /* Sets a fixed height */
+    padding: 30px; /* Adds internal padding */
+}
+
+/* Banner 3 Section - Home Page */
+#banner3 {
+    display: flex; /* Uses flexbox for layout */
+    justify-content: space-between; /* Spaces banner boxes evenly */
+    flex-wrap: wrap; /* Allows boxes to wrap to the next line */
+    padding: 0 80px; /* Adds horizontal padding */
+}
+
+/* This styles individual banner boxes inside banner 3 */
+#banner3 .banner-box {
+    display: flex; /* Uses flexbox for layout */
+    flex-direction: column; /* Stacks content vertically */
+    justify-content: center; /* Centers content vertically */
+    align-items: flex-start; /* Aligns content to the left */
+    text-align: center; /* Centers text */
+    background-image: url(../images/rolexhome.jpg); /* Adds a background image */
+    background-size: cover; /* Ensures the image covers the box */
+    background-position: center; /* Centers the background image */
+    min-width: 30%; /* Sets a minimum width */
+    height: 200px; /* Sets a fixed height */
+    padding: 30px; /* Adds internal padding */
+    margin-bottom: 20px; /* Adds spacing below the box */
+}
+
+/* This styles the second banner box inside banner 3 */
+#banner3 .banner-box:nth-child(2) {
+    background-image: url(../images/adidashome.jpg); /* Changes the background image */
+}
+
+/* This styles the third banner box inside banner 3 */
+#banner3 .banner-box:nth-child(3) {
+    background-image: url(../images/applehome.jpg); /* Changes the background image */
+}
+
+/* This styles the h2 heading inside banner 3 boxes */
+#banner3 h2 {
+    color: #fff; /* Sets the text color to white */
+    font-weight: 900; /* Makes the text extra bold */
+    font-size: 22px; /* Sets a medium font size */
+}
+
+/* This styles the h3 heading inside banner 3 boxes */
+#banner3 h3 {
+    color: #ec544e; /* Sets the text color to red */
+    font-weight: 800; /* Makes the text bold */
+    font-size: 15px; /* Sets a small font size */
+}
+
+/* Newsletter Section - Appears on Multiple Pages */
+#newsletter {
+    display: flex; /* Uses flexbox for layout */
+    justify-content: space-between; /* Spaces content evenly */
+    align-items: center; /* Centers content vertically */
+    flex-wrap: wrap; /* Allows content to wrap on smaller screens */
+    background-color: #1D503A; /* Sets a dark green background */
+}
+
+/* This styles the h4 heading inside the newsletter section */
+#newsletter h4 {
+    font-size: 22px; /* Sets a large font size */
+    font-weight: 700; /* Makes the text bold */
+    color: #fcfafa; /* Sets the text color to white */
+}
+
+/* This styles the paragraph inside the newsletter section */
+#newsletter p {
+    font-size: 14px; /* Sets a medium font size */
+    font-weight: 600; /* Makes the text semi-bold */
+    color: #ffffff; /* Sets the text color to white */
+}
+
+/* This styles the span inside the newsletter paragraph */
+#newsletter p span {
+    color: #ffbd27; /* Sets the text color to yellow */
+}
+
+/* This styles the form inside the newsletter section */
+#newsletter .form {
+    display: flex; /* Uses flexbox for layout */
+    width: 40%; /* Sets the width of the form */
+}
+
+/* This styles the input field inside the newsletter form */
+#newsletter input {
+    height: 3.125rem; /* Sets the height of the input */
+    padding: 0 1.25rem; /* Adds internal padding */
+    font-size: 14px; /* Sets a medium font size */
+    width: 100%; /* Makes the input fill the container */
+    border: 1px solid transparent; /* Removes the border */
+    border-radius: 4px; /* Adds slightly rounded corners */
+    outline: none; /* Removes the outline on focus */
+    border-top-right-radius: 0; /* Removes rounded corners on the right */
+    border-bottom-right-radius: 0; /* Removes rounded corners on the right */
+}
+
+/* This styles the button inside the newsletter form */
+#newsletter button {
+    background-color: #088178; /* Sets the background color to green */
+    color: #fff; /* Sets the text color to white */
+    white-space: nowrap; /* Prevents text from wrapping */
+    border-top-left-radius: 0; /* Removes rounded corners on the left */
+    border-bottom-left-radius: 0; /* Removes rounded corners on the left */
+}
+
+/* Footer Section - Appears on All Pages */
+footer {
+    display: flex; /* Uses flexbox for layout */
+    justify-content: space-between; /* Spaces footer columns evenly */
+    flex-wrap: wrap; /* Allows columns to wrap on smaller screens */
+    background-color: #D4D4D4; /* Sets a light gray background */
+}
+
+/* This styles individual columns inside the footer */
+footer .col {
+    display: flex; /* Uses flexbox for layout */
+    flex-direction: column; /* Stacks content vertically */
+    align-items: flex-start; /* Aligns content to the left */
+    margin-bottom: 20px; /* Adds spacing below each column */
+}
+
+/* This styles the logo inside the footer */
+footer .logo {
+    margin-bottom: 20px; /* Adds spacing below the logo */
+}
+
+/* This styles the h4 heading inside footer columns */
+footer h4 {
+    font-size: 14px; /* Sets a medium font size */
+    padding-bottom: 20px; /* Adds spacing below the heading */
+}
+
+/* This styles the paragraph inside footer columns */
+footer p {
+    font-size: 13px; /* Sets a small font size */
+    margin: 0 0 8px 0; /* Adds spacing below the paragraph */
+}
+
+/* This styles the anchor (link) elements inside footer columns */
+footer a {
+    font-size: 13px; /* Sets a small font size */
+    text-decoration: none; /* Removes the underline from links */
+    color: #222; /* Sets the text color to dark gray */
+    margin: 0 0 10px 0; /* Adds spacing below each link */
+}
+
+/* This styles the copyright text inside the footer */
+footer .copyright {
+    width: 100%; /* Makes the copyright text full width */
+    text-align: center; /* Centers the text */
+}
+
+/* Shop Page Header */
+#page-header {
+    background-color: #1D503A; /* Sets a dark green background */
+    width: 100%; /* Makes the header full width */
+    height: 300px; /* Sets a fixed height */
+    background-size: cover; /* Ensures the background covers the header */
+    display: flex; /* Uses flexbox for layout */
+    justify-content: center; /* Centers content horizontally */
+    text-align: left; /* Aligns text to the left */
+    flex-direction: column; /* Stacks content vertically */
+    padding: 14px; /* Adds internal padding */
+}
+
+/* This styles the h2 heading and paragraph inside the shop page header */
+#page-header h2,
+#page-header p {
+    color: #ffffff; /* Sets the text color to white */
+}
+
+/* Pagination Styles - Shop Page */
+#paging a {
+    text-decoration: none; /* Removes the underline from links */
+    background-color: #088178; /* Sets the background color to green */
+    padding: 15px 20px; /* Adds padding to the links */
+    border-radius: 4px; /* Adds slightly rounded corners */
+    color: #f9f9f9; /* Sets the text color to light gray */
+    font-weight: 600; /* Makes the text semi-bold */
+}
+
+/* This styles the icon inside pagination links */
+#paging a i {
+    font-size: 16px; /* Sets a medium font size */
+    font-weight: 600; /* Makes the text semi-bold */
+}
+
+/* Blog Page Header */
+#page-header.blog-header {
+    background-image: url(../images/b19.jpg); /* Adds a background image */
+}
+
+/* Blog Section - Blog Page */
+#blog {
+    padding: 150px 150px 0 150px; /* Adds padding around the blog section */
+}
+
+/* This styles individual blog boxes */
+#blog .blog-box {
+    display: flex; /* Uses flexbox for layout */
+    align-items: center; /* Centers content vertically */
+    width: 100%; /* Makes the box full width */
+    position: relative; /* Allows child elements to be positioned absolutely */
+    padding-bottom: 90px; /* Adds spacing below each blog box */
+}
+
+/* This styles the image inside blog boxes */
+#blog .blog-img {
+    width: 50%; /* Sets the width of the image */
+    margin-right: 40px; /* Adds spacing to the right of the image */
+}
+
+/* This styles the image inside blog boxes */
+#blog img {
+    width: 100%; /* Makes the image fill the container */
+    height: 300px; /* Sets a fixed height */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+/* This styles the details section inside blog boxes */
+#blog .blog-details {
+    width: 50%; /* Sets the width of the details section */
+}
+
+/* This styles the anchor (link) elements inside blog details */
+#blog .blog-details a {
+    text-decoration: none; /* Removes the underline from links */
+    font-size: 11px; /* Sets a small font size */
+    color: #000; /* Sets the text color to black */
+    font-weight: 700; /* Makes the text bold */
+    position: relative; /* Allows child elements to be positioned absolutely */
+    transition: 0.3s; /* Adds a smooth transition for hover effects */
+}
+
+/* This creates an underline effect for hovered links */
+#blog .blog-details a::after {
+    content: ""; /* Adds an empty content block */
+    width: 50px; /* Sets the width of the underline */
+    height: 1px; /* Sets the height of the underline */
+    background-color: #000; /* Makes the underline black */
+    position: absolute; /* Positions the underline absolutely */
+    top: 4px; /* Places the underline slightly below the text */
+    right: -60px; /* Aligns the underline with the text */
+}
+
+/* This styles the hover effect for links inside blog details */
+#blog .blog-details a:hover {
+    color: #088178; /* Changes the text color to green */
+}
+
+/* This styles the hover effect for the underline */
+#blog .blog-details a:hover::after {
+    background-color: #088178; /* Changes the underline color to green */
+}
+
+/* This styles the h1 heading inside blog boxes */
+#blog .blog-box h1 {
+    position: absolute; /* Positions the heading absolutely */
+    top: -40px; /* Places the heading above the box */
+    left: 0; /* Aligns the heading to the left */
+    font-size: 70px; /* Sets a large font size */
+    font-weight: 700; /* Makes the text bold */
+    color: #c9cbce; /* Sets the text color to light gray */
+    z-index: -9; /* Places the heading behind other content */
+}
+
+/* About Page Header */
+#page-header.about-header {
+    background-image: url(../images/aboutpage_banner.png); /* Adds a background image */
+}
+
+/* About Section - About Page */
+#about-head {
+    display: flex; /* Uses flexbox for layout */
+    align-items: center; /* Centers content vertically */
+}
+
+/* This styles the image inside the about section */
+#about-head img {
+    width: 50%; /* Sets the width of the image */
+    height: auto; /* Maintains the aspect ratio */
+}
+
+/* This styles the content inside the about section */
+#about-head div {
+    padding-left: 40px; /* Adds spacing to the left of the content */
+}
+
+/* Contact Details Section - Contact Page */
+#contact_detail {
+    display: flex; /* Uses flexbox for layout */
+    align-items: center; /* Centers content vertically */
+    justify-content: space-between; /* Spaces content evenly */
+}
+
+/* This styles the details section inside the contact section */
+#contact_detail .detail {
+    width: 40%; /* Sets the width of the details section */
+}
+
+/* This styles the span inside contact details */
+#contact_detail .detail span,
+#form-detail form span {
+    font-size: 12px; /* Sets a small font size */
+}
+
+/* This styles the h2 heading inside contact details */
+#contact_detail .detail h2,
+#form-detail form h2 {
+    font-size: 26px; /* Sets a large font size */
+    line-height: 35px; /* Adds space between lines */
+    padding: 20px 0; /* Adds spacing above and below the heading */
+}
+
+/* This styles the h3 heading inside contact details */
+#contact_detail .detail h3 {
+    font-size: 16px; /* Sets a medium font size */
+    padding-bottom: 15px; /* Adds spacing below the heading */
+}
+
+/* This styles the list items inside contact details */
+#contact_detail .detail li {
+    list-style: none; /* Removes bullet points */
+    display: flex; /* Uses flexbox for layout */
+    padding: 10px 0; /* Adds spacing above and below each item */
+    align-items: center; /* Centers items vertically */
+}
+
+/* This styles the icon inside contact details */
+#contact_detail .detail li i {
+    font-size: 14px; /* Sets a small font size */
+    padding-right: 22px; /* Adds spacing to the right of the icon */
+}
+
+/* This styles the paragraph inside contact details */
+#contact_detail .detail li p {
+    margin: 0; /* Removes default margin */
+    font-size: 14px; /* Sets a medium font size */
+}
+
+/* This styles the map inside the contact section */
+#contact_detail .map {
+    width: 55%; /* Sets the width of the map */
+    height: 400px; /* Sets a fixed height */
+}
+
+/* This styles the iframe inside the map */
+#contact_detail .map iframe {
+    width: 100%; /* Makes the iframe fill the container */
+    height: 100%; /* Makes the iframe fill the container */
+}
+
+/* Form Details Section - Contact Page */
+#form_detail {
+    display: flex; /* Uses flexbox for layout */
+    justify-content: space-between; /* Spaces content evenly */
+    margin: 30px; /* Adds margin around the section */
+    padding: 80px; /* Adds padding inside the section */
+    border: 1px solid #e1e1e1; /* Adds a light gray border */
+}
+
+/* This styles the form inside the form details section */
+#form_detail form {
+    width: 65%; /* Sets the width of the form */
+    display: flex; /* Uses flexbox for layout */
+    flex-direction: column; /* Stacks content vertically */
+    align-items: flex-start; /* Aligns content to the left */
+}
+
+/* This styles the input fields and textarea inside the form */
+#form_detail form input,
+#form_detail form textarea {
+    width: 100%; /* Makes the input fields fill the container */
+    padding: 12px 15px; /* Adds internal padding */
+    outline: none; /* Removes the outline on focus */
+    margin-bottom: 20px; /* Adds spacing below each input */
+    border: 1px solid #e1e1e1; /* Adds a light gray border */
+}
+
+/* This styles the button inside the form */
+#form_detail form button {
+    background-color: #088178; /* Sets the background color to green */
+    color: #fff; /* Sets the text color to white */
+}
+
+/* This styles the people section inside the form details */
+#form_detail .people div {
+    padding-bottom: 25px; /* Adds spacing below each person */
+    display: flex; /* Uses flexbox for layout */
+    align-items: flex-start; /* Aligns content to the top */
+}
+
+/* This styles the image inside the people section */
+#form_detail .people div img {
+    width: 65px; /* Sets the width of the image */
+    height: 65px; /* Sets the height of the image */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    margin-right: 15px; /* Adds spacing to the right of the image */
+}
+
+/* This styles the paragraph inside the people section */
+#form-detail .people div p {
+    margin: 0; /* Removes default margin */
+    font-size: 13px; /* Sets a small font size */
+    line-height: 25px; /* Adds space between lines */
+}
+
+/* This styles the span inside the people section */
+#form_detail .people div span {
+    display: block; /* Makes the span a block element */
+    color: #000; /* Sets the text color to black */
+    font-size: 16px; /* Sets a medium font size */
+    font-weight: 600; /* Makes the text semi-bold */
+}
+
+/* Cart Section - Cart Page */
+#cart {
+    overflow-x: auto; /* Adds horizontal scrolling if needed */
+}
+
+/* This styles the table inside the cart section */
+#cart table {
+    width: 100%; /* Makes the table full width */
+    border-collapse: collapse; /* Removes spacing between table cells */
+    table-layout: fixed; /* Ensures consistent column widths */
+    white-space: nowrap; /* Prevents text from wrapping */
+}
+
+/* This styles the images inside the cart table */
+#cart table img {
+    width: 70px; /* Sets the width of the images */
+}
+
+/* This styles the first column in the cart table */
+#cart table td:nth-child(1) {
+    width: 100px; /* Sets the width of the first column */
+    text-align: center; /* Centers the content */
+}
+
+/* This styles the second column in the cart table */
+#cart table td:nth-child(2) {
+    width: 150px; /* Sets the width of the second column */
+    text-align: center; /* Centers the content */
+}
+
+/* This styles the third column in the cart table */
+#cart table td:nth-child(3) {
+    width: 250px; /* Sets the width of the third column */
+    text-align: center; /* Centers the content */
+}
+
+/* This styles the fourth, fifth, and sixth columns in the cart table */
+#cart table td:nth-child(4),
+#cart table td:nth-child(5),
+#cart table td:nth-child(6) {
+    width: 150px; /* Sets the width of these columns */
+    text-align: center; /* Centers the content */
+}
+
+/* This styles the input field inside the fifth column */
+#cart table td:nth-child(5) input {
+    width: 70px; /* Sets the width of the input */
+    padding: 10px 5px 10px 15px; /* Adds internal padding */
+}
+
+/* This styles the table header */
+#cart table thead {
+    border: 1px solid #e2e9e1; /* Adds a light gray border */
+    border-left: none; /* Removes the left border */
+    border-right: none; /* Removes the right border */
+}
+
+/* This styles the table header cells */
+#cart table thead td {
+    font-weight: 700; /* Makes the text bold */
+    text-transform: uppercase; /* Converts text to uppercase */
+    font-size: 13px; /* Sets a small font size */
+    padding: 18px 0; /* Adds padding above and below the cells */
+}
+
+/* This styles the table body rows */
+#cart table tbody tr td {
+    padding-top: 15px; /* Adds spacing above the cells */
+}
+
+/* This styles the table body cells */
+#cart table tbody td {
+    font-size: 13px; /* Sets a small font size */
+}
+
+/* This styles the cart addition section */
+#cart-add {
+    display: flex; /* Uses flexbox for layout */
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    justify-content: space-between; /* Spaces items evenly */
+}
+
+/* This styles the coupon section inside the cart */
+#cart-add .coupon {
+    width: 50%; /* Sets width to half of the container */
+    margin-bottom: 30px; /* Adds space below */
+}
+
+/* This styles the headings inside coupon and subtotal sections */
+#cart-add .coupon h3,
+#cart-add .subtotal h3 {
+    padding-bottom: 15px; /* Adds spacing below the heading */
+}
+ 
+/* This styles the input field inside the coupon section */
+#cart-add .coupon input {
+    padding: 10px 20px; /* Adds padding for better spacing */
+    outline: none; /* Removes default focus outline */
+    width: 60%; /* Sets input field width */
+    margin-right: 10px; /* Adds space between input and button */
+    border: 1px solid #e2e9e1; /* Sets a light border */
+}
+
+/* This styles buttons inside the coupon and subtotal sections */
+#cart-add .coupon button,
+#cart-add .subtotal button {
+    background-color: #088178; /* Sets background color */
+    color: #fff; /* Sets text color to white */
+    padding: 12px 20px; /* Adds padding for a larger click area */
+}
+
+/* This styles the subtotal section inside the cart */
+#cart-add .subtotal {
+    width: 50%; /* Sets width to half of the container */
+    margin-bottom: 30px; /* Adds space below */
+    border: 1px solid #e2e9e1; /* Adds a border around the section */
+    padding: 30px; /* Adds spacing inside the section */
+}
+
+/* This styles the subtotal table */
+#cart-add .subtotal table {
+    border-collapse: collapse; /* Removes double borders */
+    width: 100%; /* Sets full width */
+    margin-bottom: 20px; /* Adds spacing below */
+}
+
+/* This styles the table cells inside the subtotal section */
+#cart-add .subtotal table td {
+    width: 50%; /* Each cell takes half the width */
+    border: 1px solid #e2e9e1; /* Adds a light border */
+    padding: 10px; /* Adds spacing inside cells */
+    font-size: 13px; /* Sets a small font size */
+}
+
+/* This styles the popup message */
+.popup {
+    display: none; /* Initially hides the popup */
+    position: fixed; /* Fixes position on the screen */
+    top: 20px;  /* Positions it near the top */
+    left: 50%; /* Centers the popup horizontally */
+    transform: translateX(-50%); /* Adjusts exact centering */
+    background-color: #5dcc5d; /* Sets green background */
+    color: white; /* Sets text color to white */
+    padding: 10px 20px; /* Adds spacing inside */
+    border-radius: 5px; /* Rounds the corners */
+    font-size: 18px; /* Sets readable text size */
+    z-index: 9999;  /* Ensures it stays above other content */
+}
+
+/* This styles the cart icon */
+.cart {
+    font-size: 30px; /* Increases size for visibility */
+    cursor: pointer; /* Changes cursor to pointer */
+}
+
+/* This styles links inside product containers */
+.pro-container a {
+    text-decoration: none; /* Removes underline */
+    color: white; /* Sets text color to white */
+}
+
+/* This styles links inside banner boxes */
+.banner-box a {
+    text-decoration: none; /* Removes underline */
+    color: white; /* Sets text color to white */
+}
+
+/* This styles the "Go Back" button */
+.go-back {
+    background-color: #0f5486; /* Sets a deep blue background */
+    color: white; /* Sets text color to white */
+    font-size: 16px; /* Sets font size */
+    border: none; /* Removes border */
+    padding: 10px 15px; /* Adds padding for a comfortable click area */
+    cursor: pointer; /* Changes cursor to pointer */
+    border-radius: 5px; /* Rounds the corners */
+    position: absolute; /* Positions it absolutely */
+    left: 20px; /* Positions it towards the left */
+    top: 20px; /* Positions it towards the top */
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+/* This styles the "Go Back" button on hover */
+.go-back:hover {
+    background-color: #e8c547; /* Changes background on hover */
+    color: #003d29; /* Changes text color on hover */
+}

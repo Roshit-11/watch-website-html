@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name"description" content="Website">
+    <meta name="keyword" content="html,web">
+    <meta name="author" content="Wristy">
+   
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+<title>Apple</title>
+<link rel="stylesheet" href="../css/style.css">
+<script src="../js/script.js"></script>
+<style>
+/* Product container styling */
+.product-container {
+    display: flex; /* Flexbox layout for horizontal alignment */
+    justify-content: center; /* Centers content horizontally */
+    margin: 30px; /* Adds margin around the container */
+    padding: 20px; /* Adds padding inside the container */
+    background-color: #fff; /* White background */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Product image styling */
+.product-image {
+    width: 400px; /* Fixed width */
+    height: 400px; /* Fixed height */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    border-color: #003d29; /* Border color */
+}
+
+/* Product details section styling */
+.product-details {
+    padding: 20px; /* Adds padding inside the details section */
+    margin-left: 30px; /* Adds margin to the left */
+    max-width: 600px; /* Limits the maximum width */
+}
+
+/* Product title styling */
+.product-title {
+    font-size: 36px; /* Large font size */
+    font-weight: 700; /* Bold text */
+    color: #003d29; /* Dark green color */
+    margin-bottom: 10px; /* Adds spacing below the title */
+}
+
+/* Product price styling */
+.product-price {
+    font-size: 28px; /* Medium font size */
+    font-weight: 600; /* Semi-bold text */
+    color: #e8c547; /* Gold color */
+    margin-bottom: 20px; /* Adds spacing below the price */
+}
+
+/* Original price styling (with strikethrough) */
+.original-price {
+    text-decoration: line-through; /* Adds strikethrough */
+    color: #9e9e9e; /* Gray color */
+    font-weight: 400; /* Normal text weight */
+}
+
+/* Discounted price styling */
+.discount-price {
+    color: #ff0000; /* Red color */
+    font-weight: 700; /* Bold text */
+}
+
+/* Product description styling */
+.product-description {
+    font-size: 18px; /* Medium font size */
+    line-height: 1.6; /* Adds spacing between lines */
+    margin-bottom: 30px; /* Adds spacing below the description */
+    color: #555; /* Dark gray color */
+}
+
+/* Product specifications section styling */
+.product-specifications {
+    background-color: #f9f9f9; /* Light gray background */
+    padding: 20px; /* Adds padding inside the section */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Specification title styling */
+.specification-title {
+    font-size: 22px; /* Medium font size */
+    font-weight: bold; /* Bold text */
+    color: #003d29; /* Dark green color */
+    margin-bottom: 15px; /* Adds spacing below the title */
+}
+
+/* Specifications list styling */
+.specifications-list {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0; /* Removes default padding */
+}
+
+/* Individual specification item styling */
+.specifications-list li {
+    font-size: 16px; /* Small font size */
+    color: #777; /* Light gray color */
+    padding: 8px 0; /* Adds padding above and below each item */
+    border-bottom: 1px solid #ddd; /* Adds a border below each item */
+}
+
+/* Removes border from the last item */
+.specifications-list li:last-child {
+    border-bottom: none;
+}
+
+/* Call-to-action button styling */
+.cta-button {
+    display: inline-block; /* Makes the button inline */
+    padding: 15px 30px; /* Adds padding inside the button */
+    background-color: #003d29; /* Dark green background */
+    color: white; /* White text */
+    font-size: 20px; /* Medium font size */
+    text-align: center; /* Centers text */
+    text-decoration: none; /* Removes underline */
+    border-radius: 50px; /* Rounded corners */
+    margin-top: 20px; /* Adds spacing above the button */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+/* Hover effect for the button */
+.cta-button:hover {
+    background-color: #e8c547; /* Gold background on hover */
+    color: #003d29; /* Dark green text on hover */
+}
+
+/* Product rating styling */
+.product-rating {
+    margin: 10px 0; /* Adds spacing above and below */
+    color: #ff9900; /* Orange color for rating */
+}
+
+/* Star icon styling */
+.star {
+    font-size: 20px; /* Medium font size */
+    color: #ff9900; /* Orange color */
+}
+
+/* Empty star icon styling */
+.star-empty {
+    font-size: 20px; /* Medium font size */
+    color: #e0e0e0; /* Light gray color */
+}
+
+/* Reviews section styling */
+.reviews {
+    width: 100%; /* Full width */
+    margin: 40px auto; /* Adds margin above and below */
+    background-color: white; /* White background */
+    padding: 30px; /* Adds padding inside the section */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Review title styling */
+.review-title {
+    font-size: 24px; /* Medium font size */
+    font-weight: bold; /* Bold text */
+    color: #333; /* Dark gray color */
+    margin-bottom: 15px; /* Adds spacing below the title */
+}
+
+/* Individual review styling */
+.review {
+    border-bottom: 1px solid #ddd; /* Adds a border below each review */
+    padding-bottom: 15px; /* Adds padding below the review */
+    margin-bottom: 15px; /* Adds spacing below the review */
+}
+
+/* Removes border from the last review */
+.review:last-child {
+    border-bottom: none;
+}
+
+/* Review heading styling */
+.review h4 {
+    font-size: 18px; /* Medium font size */
+    margin: 5px 0; /* Adds spacing above and below */
+    color: #222; /* Dark gray color */
+}
+
+/* Star rating styling */
+.stars {
+    color: gold; /* Gold color for stars */
+    font-size: 16px; /* Small font size */
+}
+
+/* Review form styling */
+.review-form {
+    margin-top: 20px; /* Adds spacing above the form */
+}
+
+/* Input, textarea, and select styling in the review form */
+.review-form input,
+.review-form textarea,
+.review-form select {
+    width: 100%; /* Full width */
+    padding: 12px; /* Adds padding inside the fields */
+    margin-bottom: 12px; /* Adds spacing below the fields */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Submit button styling */
+.submit-btn {
+    background-color: #1d503a; /* Dark green background */
+    color: white; /* White text */
+    padding: 12px 15px; /* Adds padding inside the button */
+    border: none; /* Removes border */
+    font-size: 16px; /* Medium font size */
+    cursor: pointer; /* Changes cursor to pointer */
+    border-radius: 8px; /* Rounded corners */
+    transition: 0.3s ease-in-out; /* Smooth hover transition */
+}
+
+/* Hover effect for the submit button */
+.submit-btn:hover {
+    background-color: #2e704f; /* Darker green on hover */
+}
+</style>
+</head>
+<body></body>
+    <!-- Header Section -->
+    <section id="header">
+        <!-- Link to the homepage -->
+        <a href="../index.html"></a>
+        <!-- Go Back Button -->
+        <button class="go-back" onclick="history.back()">&#8592; Go Back</button>
+        <!-- Navigation Bar -->
+        <div>
+            <ul id="navbar">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../html/shop.html">Shop</a></li>
+                <li><a href="../html/blog.html">Blog</a></li>
+                <li><a href="../html/about.html">About</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+                <li><a href="../research.html">Research</a></li>
+                <li><a href="../html/cart.html">Cart</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Product Details Section -->
+    <div class="product-container">
+        <!-- Product Image -->
+        <img src="../images/applewatch1.jpg" alt="Apple Watch" class="product-image">
+
+        <!-- Product Information -->
+        <div class="product-details">
+            <h1 class="product-title">Apple Watch S9</h1>
+            <!-- Product Rating -->
+            <div class="product-rating">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+            </div>
+
+            <!-- Product Price -->
+            <p class="product-price">150000</p>
+            <!-- Product Description -->
+            <p class="product-description">
+                The Apple Watch Series 9 is a cutting-edge smartwatch with advanced health and fitness features, a stunning always-on Retina display, and powerful performance. It offers seamless integration with the Apple ecosystem, tracking your activity, heart rate, sleep, and more, all with extended battery life and new customization options.
+            </p>
+            <!-- Product Specifications -->
+            <div class="product-specifications">
+                <h2 class="specification-title">Specifications</h2>
+                <ul class="specifications-list">
+                    <li>Movement: Smartwatch</li>
+                    <li>Case Material: Recycled aluminum or stainless steel</li>
+                    <li>Case Diameter: 41mm / 45mm</li>
+                    <li>Battery Life: Up to 18 hours in regular use</li>
+                    <li>Display: 1.69" Always-on Retina OLED touchscreen</li>
+                    <li>Water Resistance: WR50 (50 meters)</li>
+                    <li>Functions: GPS, Heart Rate Monitoring, Blood Oxygen Monitoring, Sleep Tracking, ECG, Music Storage, Always-On Display, Apple Pay</li>
+                </ul>
+            </div>
+
+            <!-- Buy Now Button -->
+            <a class="cta-button" onclick="thankYouMessage()">Buy Now</a>
+        </div>
+    </div>
+
+    <!-- Customer Reviews Section -->
+    <section class="reviews">
+        <h2 class="review-title">Customer Reviews</h2>
+
+        <!-- Individual Reviews -->
+        <div class="review">
+            <h4>Pushpa Kamal Dahal</h4>
+            <p class="stars">★★★★★</p>
+            <p>An absolute masterpiece! The simplicity and elegance are unmatched.</p>
+        </div>
+
+        <div class="review">
+            <h4>Sher Bahadur Deuba</h4>
+            <p class="stars">★★★★☆</p>
+            <p>Beautiful watch, but the price is a bit steep. Still, it's worth it.</p>
+        </div>
+
+        <div class="review">
+            <h4>K.P. Oli</h4>
+            <p class="stars">★★★☆☆</p>
+            <p>Great design, but the bracelet feels a bit stiff initially.</p>
+        </div>
+
+        <!-- Add Review Form -->
+        <div class="review-form">
+            <h3>Leave a Review</h3>
+            <!-- Input for Name -->
+            <input type="text" id="name" placeholder="Your Name" required>
+            <!-- Dropdown for Rating -->
+            <select id="rating">
+                <option value="5">★★★★★ (5 Stars)</option>
+                <option value="4">★★★★☆ (4 Stars)</option>
+                <option value="3">★★★☆☆ (3 Stars)</option>
+                <option value="2">★★☆☆☆ (2 Stars)</option>
+                <option value="1">★☆☆☆☆ (1 Star)</option>
+            </select>
+            <!-- Textarea for Review Comment -->
+            <textarea id="comment" rows="4" placeholder="Write your review here..." required></textarea>
+            <!-- Submit Button -->
+            <button class="submit-btn" onclick="submitReview()">Submit Review</button>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign Up For Newsletter</h4>
+            <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
+        </div>
+        <!-- Newsletter Form -->
+        <div class="form">
+            <input type="text" placeholder="Your email address">
+            <button class="normal">Sign Up</button>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="section-p1">
+        <div class="col">
+            <!-- Logo -->
+            <img src="../images/LOG.png" alt="Logo" class="nav-logo">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> Kathmandu, Nepal - 44600</p>
+            <p><strong>Phone:</strong> +977-9745401973</p>
+            <p><strong>Hours:</strong> 10:00 - 18:00, Mon - Sat</p>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="../html/about.html">About us</a>
+            <a href="../html/contact.html">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="../html/cart.html">View Cart</a>
+            <a href="../html/contact.html">Help</a>
+        </div>
+        <!-- Copyright Notice -->
+        <div class="copyright">
+            <p>Created By Wristy | All Rights Reserved | &#169; 2025</p>
+        </div>
+    </footer>
+</body>
+
+    <!-- javascript script file link -->
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

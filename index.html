@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character encoding, compatibility, and responsive design -->
+    <meta charset="UTF-8">
+    <meta name"description" content="Website">
+    <meta name="keyword" content="html,web">
+    <meta name="author" content="Wristy">
+   
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title of the webpage -->
+    <title>Wristly</title>
+
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="../courcework/css/style.css">
+
+    <!-- Internal CSS for specific styles -->
+    <style>
+        /* Styles for the original price text */
+        .original-price {
+            text-decoration: line-through; /* Adds a strikethrough effect */
+            color: rgba(0, 0, 0, 0.4); /* Sets a semi-transparent black color */
+            font-size: 6px; /* Small font size for the original price */
+            margin-right: 8px; /* Adds spacing to the right */
+        }
+
+        /* Styles for the discounted price text */
+        .discount-price {
+            color: red; /* Sets the text color to red */
+            font-weight: bold; /* Makes the text bold */
+            font-size: 1.1em; /* Slightly larger font size */
+        }
+
+        /* Dropdown container for navigation menus */
+        .dropdown {
+            position: relative; /* Allows absolute positioning of child elements */
+        }
+
+        /* Dropdown menu styles */
+        .dropdown-menu {
+            display: none; /* Hides the dropdown by default */
+            position: absolute; /* Positions the dropdown absolutely */
+            top: 100%; /* Aligns the dropdown below the parent */
+            left: 0; /* Aligns the dropdown to the left */
+            background-color: #96aaaa; /* Sets a dark emerald background */
+            color: #f0ece2; /* Sets the text color to eggshell */
+            list-style: none; /* Removes bullet points */
+            padding: 15px; /* Adds internal padding */
+            margin: 0; /* Removes default margin */
+            border-radius: 12px; /* Adds rounded corners */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Adds a shadow for depth */
+            min-width: 200px; /* Sets a minimum width */
+            z-index: 1000; /* Ensures the dropdown is above other elements */
+            opacity: 0; /* Makes the dropdown transparent by default */
+            transform: translateY(-10px); /* Moves the dropdown up slightly */
+            transition: opacity 0.3s ease, transform 0.3s ease; /* Adds smooth transitions */
+        }
+
+        /* Styles for dropdown menu items */
+        .dropdown-menu li {
+            margin: 10px 0; /* Adds spacing between items */
+        }
+
+        /* Styles for links inside the dropdown menu */
+        .dropdown-menu a {
+            color: #f0ece2; /* Sets the text color to eggshell */
+            text-decoration: none; /* Removes underline from links */
+            font-weight: 500; /* Sets medium font weight */
+            padding: 10px 12px; /* Adds padding to links */
+            display: block; /* Makes links block-level elements */
+            border-radius: 8px; /* Adds rounded corners */
+            transition: background-color 0.3s ease, color 0.3s ease; /* Adds hover transitions */
+        }
+
+        /* Hover effect for dropdown links */
+        .dropdown-menu a:hover {
+            background-color: #c5dad7; /* Changes background color on hover */
+            color: #ffffff; /* Changes text color to white on hover */
+        }
+
+        /* Shows the dropdown menu on hover */
+        .dropdown:hover .dropdown-menu {
+            display: block; /* Displays the dropdown */
+            opacity: 1; /* Makes the dropdown fully visible */
+            transform: translateY(0); /* Resets the position */
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <section id="header">
+        <!-- Logo linking to the homepage -->
+        <a href="./index.html"><img src="images/LOG.png" alt="Logo" class="nav-logo"></a>
+
+        <!-- Navigation Bar -->
+        <div>
+            <ul id="navbar">
+                <!-- Home link -->
+                <li><a href="./index.html">Home</a></li>
+
+                <!-- Shop dropdown menu -->
+                <li class="dropdown">
+                    <a href="../courcework/html/shop.html">Shop</a>
+                    <ul class="dropdown-menu">
+                        <a href="../courcework/html/luxuryshop.html">Luxury</a>
+                        <a href="../courcework/html/sportswearshop.html">Sportswear</a>
+                        <a href="../courcework/html/smartwatcheshop.html">Smartwatches</a>
+                    </ul>
+                </li>
+
+                <!-- Other navigation links -->
+                <li><a href="../courcework/html/blog.html">Blog</a></li>
+                <li><a href="../courcework/html/about.html">About</a></li>
+                <li><a href="../courcework/html/contact.html">Contact</a></li>
+                <li><a href="../courcework/html/research.html">Research</a></li>
+                <li><a href="../courcework/html/cart.html">Cart</a></li>
+                
+
+            </ul>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <!-- Background video -->
+        <video autoplay muted loop playsinline id="background-video">
+            <source src="images/hero-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Hero content -->
+        <div class="hero-content">
+            <h4>Trade-In-Offer</h4>
+            <h2>Super Value Deals</h2>
+            <h1>On Our Luxury Collection</h1>
+            <p>Save More This Valentine Week, With Upto 30% Off!</p>
+            <a href="../courcework/html/shop.html"><button>Shop Now</button></a>
+        </div>
+    </section>
+
+    <!-- Product Section -->
+    <section id="product1" class="section-p1">
+        <h2>Our Discounted Collection</h2>
+        <p>This Valentine, get yourself or your loved ones watches from our luxury collection with 30% discount.</p>
+        <div class="pro-container">
+            <!-- Product 1: Rolex Day Date -->
+            <div class="pro">
+                <a href="../courcework/html/rolexdaydate.html">
+                    <img src="images/rolex.jpg" alt="Rolex Day Date">
+                    <div class="des">
+                        <h5>Rolex Day Date</h5>
+                        <div class="star">
+                            <span style="font-size:150%;color:#EFBF04;">★★★★★</span>
+                        </div>
+                        <h4>
+                            <span class="original-price">RS 430000</span>
+                            <span class="discount-price">RS 400000</span>
+                        </h4>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Product 2: Rolex Oyster Perpetual -->
+            <div class="pro">
+                <a href="../courcework/html/rolex_oyster_perpetual.html">
+                    <img src="images/rolex1.jpg" alt="">
+                    <div class="des">
+                        <h5>Rolex Oyster Perpetual</h5>
+                        <div class="star">
+                            <span style="font-size:150%;color:#EFBF04;">★★★★★</span>
+                        </div>
+                        <h4>
+                            <span class="original-price">RS 250000</span>
+                            <span class="discount-price">RS 150000</span>
+                        </h4>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Product 3: Seiko Propex 1968 -->
+            <div class="pro">
+                <a href="../courcework/html/Seiko_Propex_1968.html">
+                    <img src="images/Seiko-removebg-preview.png" alt="">
+                    <div class="des">
+                        <h5>Seiko Propex 1968</h5>
+                        <div class="star">
+                            <span style="font-size:150%;color:#EFBF04;">★★★★★</span>
+                        </div>
+                        <h4>
+                            <span class="original-price">RS 100000</span>
+                            <span class="discount-price">RS 70000</span>
+                        </h4>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Product 4: Audemars Piguet -->
+            <div class="pro">
+                <a href="../courcework/html/audemarspiguet.html">
+                    <img src="images/audemarspiguet.jpg" alt="">
+                    <div class="des">
+                        <h5>Audemars Piguet</h5>
+                        <div class="star">
+                            <span style="font-size:150%;color:#EFBF04;">★★★★★</span>
+                        </div>
+                        <h4>
+                            <span class="original-price">RS 200000</span>
+                            <span class="discount-price">RS 140000</span>
+                        </h4>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner Section -->
+    <section id="banner" class="section-m1">
+        <h4>This Valentine Week</h4>
+        <h2>Save <span>30%</span>-With Your Loved Ones.</h2>
+        <a href="../courcework/html/luxuryshop.html"><button class="normal">Grab The Offer</button></a>
+    </section>
+
+    <!-- Top Selling Products Section -->
+    <section id="product1" class="section-p1">
+        <h2>Top Selling</h2>
+        <p>Top Selling Products from all our collections are presented here for you.</p>
+        <div class="pro-container">
+            <!-- Product 1: Apple Watch -->
+            <div class="pro">
+                <a href="../courcework/html/applewatchseries9.html">
+                    <img src="images/applewatch1.jpg" alt="">
+                    <div class="des">
+                        <h5>Apple watch</h5>
+                        <div class="star">
+                            <span style="font-size:150%;color:#EFBF04;">★★★★★</span>
+                        </div>
+                        <h4>RS 95000</h4>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Product 2: Adidas Digital Two -->
+            <div class="pro">
+                <a href="../courcework/html/adidas.html">
+                    <img src="images/adidas.jpg" alt="">
+                    <div class="des">
+                        <h5>Adidas Digital Two</h5>
+                        <div class="star">
+                            <span style="font-size:150%;color:#EFBF04;">★★★★★</span>
+                        </div>
+                        <h4>RS 100000</h4>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Product 3: G Shock Mudmaster -->
+            <div class="pro">
+                <a href="../courcework/html/g-shockmudmaster.html">
+                    <img src="images/gshock-removebg-preview.png" alt="">
+                    <div class="des">
+                        <h5>G Shock Mudmaster</h5>
+                        <div class="star">
+                            <span style="font-size:150%;color:#EFBF04;">★★★★★</span>
+                        </div>
+                        <h4>RS 200000</h4>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Product 4: Rolex Day Date -->
+            <div class="pro">
+                <a href="../courcework/html/rolexdaydate.html">
+                    <img src="images/rolex.jpg" alt="">
+                    <div class="des">
+                        <h5>Rolex day date</h5>
+                        <div class="star">
+                            <span style="font-size:150%;color:#EFBF04;">★★★★★</span>
+                        </div>
+                        <h4>RS 300000</h4>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Small Banner Section -->
+    <section id="sm-banner" class="section-p1">
+        <!-- Blog 1: Evolution of Watches -->
+        <div class="banner-box1">
+            <h4>Blogs</h4>
+            <h2>The Evolution of Watches</h2>
+            <span style="text-align: left; display: block;">
+                Watches are more than just timekeeping devices;<br>
+                they are historical artifacts that reflect the technological<br>
+                and cultural evolution of society. From the cumbersome <br>
+                pocket watches of the past to the sophisticated  <br>
+                wrist watches of today the journey of timepieces<br>
+                 is a story of.....
+            </span>
+            <a href="../courcework/html/blog1description.html"><button class="white">Read More</button></a>
+        </div>
+
+        <!-- Blog 2: Why Invest in a Luxury Watch? -->
+        <div class="banner-box2">
+            <h4>Blogs</h4>
+            <h2>Why Invest In A Luxury Watch?</h2>
+            <span style="text-align: left; display: block;">
+                A luxury watch is far more than a tool for telling time.<br>
+                It represents a remarkable fusion of artistry, engineering,<br>
+                and timeless appeal. Whether you are an enthusiast, a collector,<br>
+                or someone simply looking to make a meaningful purchase,<br>
+                investing in a luxury watch is about embracing craftsmanship,<br>
+                 style, and legacy.....
+            </span>
+            <a href="../courcework/html/blog2description.html"><button class="white">Read More</button></a>
+        </div>
+    </section>
+
+    <!-- Banner 3 Section: Official Distributors -->
+    <h4 style="text-align: center; margin-bottom: 15px;">Official Distributors of</h4>
+    <section id="banner3">
+        <!-- Rolex Distributor -->
+        <div class="banner-box">
+            <h2>Rolex Day Date</h2>
+            <a href="https://www.rolex.com/en-us"><h3>Dive Deep</h3></a>
+        </div>
+
+        <!-- Adidas Distributor -->
+        <div class="banner-box">
+            <h2>Adidas Watch</h2>
+            <a href="https://adidaswatches.com"><h3>Dive Deep</h3></a>
+        </div>
+
+        <!-- Apple Watch Distributor -->
+        <div class="banner-box">
+            <h2>Apple Watch<br>S-7</h2>
+            <a href="https://www.apple.com/watch/"><h3>Dive Deep</h3></a>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign Up For Newsletter</h4>
+            <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Your email address">
+            <button class="normal">Sign Up</button>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="section-p1">
+      <div class="col" style="padding-left: 10px;">
+  <img src="images/LOG.png" alt="Logo" class="nav-logo" style="display: block;">
+  <h4>Contact</h4>
+  <p><strong>Address:</strong> Kathmandu, Nepal - 44600  </p>
+  <p><strong>Phone:</strong> +977-9745401973</p>
+  <p><strong>Hours:</strong> 10:00 - 18:00, Mon - Sat</p>
+</div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="./html/about.html">About us</a>
+            <a href="./html/contact.html">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="./html/cart.html">View Cart</a>
+            <a href="./html/contact.html">Help</a>
+        </div>
+        <div class="copyright">
+            <p>Created By Wristy | All Rights Reserved | &#169; 2025</p>
+        </div>
+    </footer>
+
+
+    <!-- Link to the external JavaScript file -->
+    <script src="../courcework/js/script.js"></script>
+</body>
+</html>

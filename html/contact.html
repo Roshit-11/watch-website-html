@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags for character set, compatibility, and responsive design -->
+    <meta charset="UTF-8">
+    <meta name"description" content="Website">
+    <meta name="keyword" content="html,web">
+    <meta name="author" content="Wristy">
+   
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wristly</title>
+
+    <!-- Link to custom CSS file -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- Header section with logo and navigation -->
+    <section id="header">
+        <a href="../index.html"><img src="../images/LOG.png" alt="Logo" class="nav-logo">
+      
+        <div>
+            <ul id="navbar">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../html/shop.html">Shop</a></li>
+                <li><a href="../html/blog.html">Blog</a></li>
+                <li><a href="../html/about.html">About</a></li>
+                <li><a href="../html/contact.html">Contact</a></li>
+                <li><a href="../html/research.html">Research</a></li>
+                <li><a href="../html/cart.html">Cart</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact page header section -->
+    <section id="page-header" class="about-header">
+        <h2>#let's_talk</h2>
+        <p>LEAVE A MESSAGE, We love to hear from you!</p>
+    </section>
+
+    <!-- Contact details section with address, email, phone, and map -->
+    <section id="contact_detail" class="section-p1">
+        <div class="detail">
+            <span>GET IN TOUCH</span>
+            <h2>Visit our agency location or contact us today.</h2>
+            <h3>Head Office</h3>
+            <div>
+                <li>
+                    <p>Kamalpokhari, Kathmandu, Nepal</p>
+                </li>
+                <li>
+                    <p>roshitlamichhane12@gmail.com</p>
+                </li>
+                <li>
+                    <p>+977 9742209455</p>
+                </li>
+                <li>
+                    <p>Sunday to Saturday: 9:00 AM to 16:00 PM</p>
+                </li>
+            </div>
+        </div>
+        <div class="map">
+            <!-- Embedded Google Map -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.969774192898!2d85.32413757818384!3d27.707640541803812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1908434cb3c5%3A0x1fdf1a6d41d2512d!2sIslington%20College!5e1!3m2!1sen!2snp!4v1738039260546!5m2!1sen!2snp" 
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- Contact form section -->
+    <section id="form_detail">
+        <form id="contactForm">
+            <span>LEAVE A MESSAGE</span>
+            <h2>We love to hear from you</h2>
+            <!-- Input fields for name, email, subject, and message -->
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email">
+
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Enter subject">
+
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Write Your Message Here"></textarea>
+
+            <!-- Submit button -->
+            <button type="submit">Submit</button>
+        </form>
+        <!-- Team members section with images and contact details -->
+        <div class="people">
+            <div>
+                <img src="../images/roshit.png" alt="">
+                <p><span>Roshit Lamichhane</span> co worker<br>Phone: +977 9742209455<br>Email: roshitlamichhane12@gmail.com</p>
+            </div>
+            <div>
+                <img src="../images/prawal.png" alt="">
+                <p><span>Prawal Banjara</span>co worker <br>Phone: +977 123 000 77 88<br>Email: Prawalbanjara@gmail.com</p>
+            </div>
+            <div>
+                <img src="../images/prabesh.png" alt="">
+                <p><span>Prabesh Khanal</span> co worker<br>Phone: +977 123 000 77 88<br>Email: prabeshkhanal75@gmail.com</p>
+            </div>
+            <div>
+                <img src="../images/Swarnim.jpg" alt="">
+                <p><span>Swarnim Rajbhandari</span> leader <br>Phone: +977 123 000 77 88<br>Email: Swarnimrajbhandari@gmail.com.com</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer section with contact information and links -->
+    <footer class="section-p1">
+        <div class="col">
+            <img src="../images/LOG.png" alt="Logo" class="nav-logo">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> Kathmandu, Nepal - 44600</p>
+            <p><strong>Phone:</strong> +977-9745401973</p>
+            <p><strong>Hours:</strong> 10:00 - 18:00, Mon - Sat</p>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="../html/about.html">About us</a>
+            <a href="../html/contact.html">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="../html/cart.html">View Cart</a>
+            <a href="../html/contact.html">Help</a>
+        </div>
+        <div class="copyright">
+            <p>Created By Wristy | All Rights Reserved | &#169; 2025</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for form validation -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("contactForm").addEventListener("submit", function (event) {
+                let name = document.getElementById("name").value.trim();
+                let email = document.getElementById("email").value.trim();
+                let subject = document.getElementById("subject").value.trim();
+                let message = document.getElementById("message").value.trim();
+    
+                // Check if all fields are empty
+                if (!name && !email && !subject && !message) {
+                    alert("Enter the data first!");
+                    event.preventDefault();
+                    return;
+                }
+    
+                // Validate individual fields
+                if (!name) {
+                    alert("Please enter your name.");
+                    event.preventDefault();
+                    return;
+                }
+                if (!email) {
+                    alert("Please enter your email.");
+                    event.preventDefault();
+                    return;
+                }
+                if (!subject) {
+                    alert("Please enter a subject.");
+                    event.preventDefault();
+                    return;
+                }
+                if (!message) {
+                    alert("Please enter your message.");
+                    event.preventDefault();
+                    return;
+                }
+    
+                // Show success message when all fields are filled
+                alert("We have received your message. We will contact you by Gmail. Thank you!");
+    
+                // Reset the form after submission
+                document.getElementById("contactForm").reset();
+                event.preventDefault(); // Remove this if you want to allow actual form submission
+            });
+        });
+    </script>
+
+</body>
+
+</html>
